@@ -52,12 +52,12 @@ Util.sumPrime = function(n) {
 	}
     else {
     	let result = 0;
-    	for(let i = 2; i <= n; i++) {
+		for(let i = 2; i <= n; i++) {
     		if(Util.isPrime(i))
     			result += i;
     	}
     	return result;
-    }	
+    }
 };
 
 /**
@@ -93,8 +93,8 @@ Util.fizzBuzz = function(n) {
 Util.cipher = function (phrase) {
 	let charTransformation = (char) => {
 		let charValue = char.charCodeAt(0);
-		if((charValue < 65 || charValue > 122) 
-		&& (charValue > 90 || charValue < 97)) {
+		if(charValue < 65 || charValue > 122 
+		|| (charValue > 90 && charValue < 97)) {
 			return char; //special char -> return char
 		} else {
 			if(charValue == 90) {
