@@ -52,12 +52,12 @@ Util.sumPrime = function(n) {
 	}
     else {
     	let result = 0;
-    	for(let i = 2; i <= n; i++) {
+		for(let i = 2; i <= n; i++) {
     		if(Util.isPrime(i))
     			result += i;
     	}
     	return result;
-    }	
+    }
 };
 
 /**
