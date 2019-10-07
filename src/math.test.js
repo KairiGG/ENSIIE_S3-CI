@@ -106,4 +106,8 @@ describe('cipher', function () {
 		expect(Util.cipher('Test Unitaire du Z')).toBe('Uftu Vojubjsf ev A');
 	});
 
+	test('Test cipher avec phrase contenant des caractèresspéciaux, phrase="\'"&@=+!§^?,;é"', () => {
+		expect(Util.cipher('\'"&@=+!§^?,;é')).toBe('\'"&@=+!§^?,;é');
+	});
+
 });
