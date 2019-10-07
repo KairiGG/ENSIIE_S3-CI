@@ -56,7 +56,7 @@ describe('union', function () {
     		expect(interval1.union(interval2)).toStrictEqual([new Interval(1,4)]);
 	});
 
-	test('Test include function, if the interval doesn\'t overlap the argument {(1, 2),(3, 4)}', () => {
+	test('Test union function, if the interval doesn\'t overlap the argument {(1, 2),(3, 4)}', () => {
 		let interval1 = new Interval(1, 2);
 		let interval2 = new Interval(3, 4);
     		expect(interval1.union(interval2)).toStrictEqual([interval1, interval2]);
@@ -71,7 +71,7 @@ describe('intersection', function () {
     		expect(interval1.intersection(interval2)).toStrictEqual(new Interval(2,3));
 	});
 
-	test('Test include function, if the interval doesn\'t overlap the argument {(1, 2),(3, 4)}', () => {
+	test('Test intersection function, if the interval doesn\'t overlap the argument {(1, 2),(3, 4)}', () => {
 		let interval1 = new Interval(1, 2);
 		let interval2 = new Interval(3, 4);
     		expect(interval1.intersection(interval2)).toStrictEqual(null);
