@@ -78,3 +78,18 @@ describe('intersection', function () {
 	});
 });
 
+describe('exclusion', function () {
+
+	test('Test exclusion function, if the interval overlap the argument {(1, 3),(2, 4)}', () => {
+		let interval1 = new Interval(1, 3);
+		let interval2 = new Interval(2, 4);
+    		expect(interval1.exclusion(interval2)).toStrictEqual([new Interval(1,2), new Interval(3,4)]);
+	});
+
+	test('Test exclusion function, if the interval doesn\'t overlap the argument {(1, 2),(3, 4)}', () => {
+		let interval1 = new Interval(1, 2);
+		let interval2 = new Interval(3, 4);
+    		expect(interval1.exclusion(interval2)).toStrictEqual([interval1, interval2]);
+	});
+});
+

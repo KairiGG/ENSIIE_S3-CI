@@ -109,7 +109,11 @@ class Interval {
      * @returns {Interval[]}
      */
     exclusion(interval) {
-
+		if(this.overlaps(interval))
+			return [new Interval(Math.min(this.start, interval.start), Math.max(this.start, interval.start)),
+			new Interval(Math.min(this.end, interval.end), Math.max(this.end, interval.end))];
+		else
+			return [this, interval];
     };
 }
 
