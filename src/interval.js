@@ -4,9 +4,9 @@ class Interval {
         this.end = end
     }
 
-    toString() {
+    /*toString() {
         return "[" + this.start + "," + this.end + "]";
-    }
+    }*/
 
     /**
      * Exemple 1 :
@@ -43,7 +43,7 @@ class Interval {
      * @returns {boolean}
      */
     includes(interval) {
-	
+	return this.start <= interval.start && this.end >= interval.end;
     };
 
     /**
