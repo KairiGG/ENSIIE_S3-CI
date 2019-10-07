@@ -13,6 +13,12 @@ describe('overlaps', function () {
 		let interval2 = new Interval(3,4);
 		expect(interval1.overlaps(interval2)).toBe(false);
 	});
+
+	test('Test overlapping, if two intervals don\'t overlap each other{(3, 4),(1, 2)}', () => {
+		let interval1 = new Interval(3,4);
+		let interval2 = new Interval(1,2);
+		expect(interval1.overlaps(interval2)).toBe(false);
+	});
 });
 
 describe('includes', function () {
@@ -39,5 +45,20 @@ describe('includes', function () {
 		let interval1 = new Interval(1,4);
 		let interval2 = new Interval(1,4);
 		expect(interval1.includes(interval2)).toBe(true);
+	});
+});
+
+describe('union', function () {
+
+	test('Test union function, if the interval overlap the argument {(1, 3),(2, 4)}', () => {
+		let interval1 = new Interval(1, 3);
+		let interval2 = new Interval(2, 4);
+    	expect(interval1.union(interval2)).toStrictEqual([new Interval(1,4)]);
+	});
+
+	test('Test include function, if the interval doesn\'t overlap the argument {(1, 2),(3, 4)}', () => {
+		let interval1 = new Interval(1, 2);
+		let interval2 = new Interval(3, 4);
+    	expect(interval1.union(interval2)).toStrictEqual([interval1, interval2]);
 	});
 });
