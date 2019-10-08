@@ -45,3 +45,18 @@ describe('Book repository GetTotalPrice', function () {
         expect(repository.getTotalPrice()).toBe(35);
     });
 });
+
+describe('Book repository GetBookByName', function () {
+
+    test('Get book by name', () => {
+
+        const dbMock = {
+            get : jest.fn().mockReturnThis(),
+            find : jest.fn().mockReturnThis(),
+            value : jest.fn().mockReturnValue({ "id": 1, "name": "test", "price": 6.1, "added_at": "2019-01-01" })
+        };
+        const repository = new BookRepository(dbMock);
+
+        expect(repository.getBookByName()).toStrictEqual({ "id": 1, "name": "test", "price": 6.1, "added_at": "2019-01-01" });
+    });
+});
