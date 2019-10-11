@@ -57,6 +57,28 @@ describe('Book repository GetBookByName', function () {
         };
         const repository = new BookRepository(dbMock);
 
-        expect(repository.getBookByName()).toStrictEqual({ "id": 1, "name": "test", "price": 6.1, "added_at": "2019-01-01" });
+        expect(repository.getBookByName('test')).toStrictEqual({ "id": 1, "name": "test", "price": 6.1, "added_at": "2019-01-01" });
+    });
+});
+
+describe('Book repository getCountBookAddedByMonth', function () {
+
+    test('Get count book added by month', () => {
+
+        const dbMock = {
+            get : jest.fn().mockReturnThis(),
+            filter : jest.fn().mockReturnThis(),
+            map : jest.fn().mockReturnThis(),
+            value : jest.fn().mockReturnValue([ "2019-06-02", "2021-01-01", "2019-01-01", "2020-03-01", "2019-01-04", "2021-02-01", "2019-01-01", "2032-01-01", "2019-01-01" ])
+        };
+        const repository = new BookRepository(dbMock);
+
+        expect(repository.getCountBookAddedByMonth('test')).toStrictEqual([ { year: '2019', month: 1, count: 4, count_cumulative: 4 },
+  { year: '2019', month: 6, count: 1, count_cumulative: 5 },
+  { year: '2020', month: 3, count: 1, count_cumulative: 1 },
+  { year: '2021', month: 1, count: 1, count_cumulative: 1 },
+  { year: '2021', month: 2, count: 1, count_cumulative: 2 },
+  { year: '2032', month: 1, count: 1, count_cumulative: 1 } ]
+);
     });
 });
