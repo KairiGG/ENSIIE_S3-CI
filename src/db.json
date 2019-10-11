@@ -4,7 +4,19 @@
       "id": 1,
       "name": "test",
       "price": 6.1,
-      "added_at": "2019-01-01"
+      "added_at": "2019-06-02"
+    },
+    {
+      "id": 1,
+      "name": "test",
+      "price": 6.1,
+      "added_at": "2053-02-01"
+    },
+    {
+      "id": 1,
+      "name": "test",
+      "price": 6.1,
+      "added_at": "2021-01-01"
     },
     {
       "id": 1,
@@ -16,31 +28,19 @@
       "id": 1,
       "name": "test",
       "price": 6.1,
-      "added_at": "2019-01-01"
+      "added_at": "2020-03-01"
     },
     {
       "id": 1,
       "name": "test",
       "price": 6.1,
-      "added_at": "2019-01-01"
+      "added_at": "2019-01-04"
     },
     {
       "id": 1,
       "name": "test",
       "price": 6.1,
-      "added_at": "2019-01-01"
-    },
-    {
-      "id": 1,
-      "name": "test",
-      "price": 6.1,
-      "added_at": "2019-01-01"
-    },
-    {
-      "id": 1,
-      "name": "test",
-      "price": 6.1,
-      "added_at": "2019-01-01"
+      "added_at": "2021-02-01"
     },
     {
       "id": 1,
@@ -52,7 +52,37 @@
       "id": 1,
       "name": "unique",
       "price": 888,
+      "added_at": "2032-01-01"
+    },
+    {
+      "id": 1,
+      "name": "unique",
+      "price": 888,
       "added_at": "2019-01-01"
+    },
+    {
+      "id": 1,
+      "name": "unique",
+      "price": 888,
+      "added_at": "2019-10-01"
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "price": 8777,
+      "added_at": "2019-01-01"
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "price": 8777,
+      "added_at": "2019-10-01"
+    },
+    {
+      "id": 2,
+      "name": "test",
+      "price": 8777,
+      "added_at": "2019-01-03"
     }
   ]
 }
